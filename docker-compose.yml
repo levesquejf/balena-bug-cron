@@ -1,0 +1,9 @@
+version: '2'
+services:
+  cron:
+    build: ./cron
+    cap_add:
+      - AUDIT_WRITE
+    pid: host
+    network_mode: host
+    privileged: true
